@@ -13,10 +13,10 @@ export function About() {
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="overflow-hidden rounded-[3rem] bg-gray-100 shadow-2xl shadow-gray-300/40 lg:sticky lg:top-32">
             <img
-              src="/images/doctor-clinic.jpg"
-              alt="Dr. Anthonio McFadden in the dental clinic"
-              className="h-[720px] w-full object-cover object-center"
-            />
+  src="/images/doctor-clinic.jpg"
+  alt="Dr. Anthonio McFadden in the dental clinic"
+  className="image-pop-reveal h-[720px] w-full object-cover object-center"
+/>
           </div>
 
           <div>
@@ -159,10 +159,10 @@ export function About() {
 
           <div className="overflow-hidden rounded-[3rem] bg-white p-3 shadow-2xl shadow-yellow-300/10">
             <img
-              src="/images/forty-under-forty.jpg"
-              alt="Dr. Anthonio McFadden 2025 40 Under 40 Honoree"
-              className="max-h-[720px] w-full rounded-[2.5rem] object-cover object-top"
-            />
+  src="/images/forty-under-forty.jpg"
+  alt="Dr. Anthonio McFadden 2025 40 Under 40 Honoree"
+  className="image-pop-reveal max-h-[720px] w-full rounded-[2.5rem] object-cover object-top"
+/>
           </div>
         </div>
       </section>

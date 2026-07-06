@@ -6,7 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { MobileCallBar } from "./components/MobileCallBar";
 import { NotFound } from "./pages/NotFound";
-
+import { ScrollAnimationProvider } from "./components/ScrollAnimations";
 import { Home } from "./pages/Home";
 import { EmergencyCare } from "./pages/EmergencyCare";
 import { FeesPayment } from "./pages/FeesPayment";
@@ -19,7 +19,8 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-white pb-24 text-gray-950 lg:pb-0">
         <Navbar />
-        <ScrollToTop />
+<ScrollToTop />
+<ScrollAnimationProvider />
 
         <Routes>
           <Route path="/symptom-guide" element={<SymptomGuide />} />

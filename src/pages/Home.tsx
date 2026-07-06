@@ -60,11 +60,10 @@ export function Home() {
           <div className="rounded-[3rem] bg-white p-4 shadow-2xl shadow-blue-900/10">
             <div className="relative overflow-hidden rounded-[2.5rem] bg-gray-950">
               <img
-                src="/images/doctor-portrait.jpg"
-                alt="Dr. Anthonio McFadden smiling in Smile Detroit clinical attire"
-                className="h-[620px] w-full object-cover object-top"
-              />
-
+  src="/images/doctor-portrait.jpg"
+  alt="Dr. Anthonio McFadden smiling in Smile Detroit clinical attire"
+  className="image-pop-reveal h-[620px] w-full object-cover object-top"
+/>
               <div className="absolute inset-x-5 bottom-5 rounded-[2rem] bg-white/90 p-5 shadow-xl backdrop-blur">
                 <p className="text-sm font-black uppercase tracking-[0.18em] text-red-600">
                   {siteContent.signaturePromise}
