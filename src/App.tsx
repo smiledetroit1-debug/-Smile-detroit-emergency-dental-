@@ -11,6 +11,7 @@ import { Home } from "./pages/Home";
 import { EmergencyCare } from "./pages/EmergencyCare";
 import { FeesPayment } from "./pages/FeesPayment";
 import { About } from "./pages/About";
+import { FloatingContactButtons } from "./components/FloatingContactButtons";
 
 import { siteContent } from "./data/siteContent";
 
@@ -142,7 +143,7 @@ function App() {
   </div>
 </div>
         </footer>
-
+        <FloatingContactButtons />
         <MobileCallBar />
       </div>
     </BrowserRouter>

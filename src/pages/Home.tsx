@@ -3,6 +3,78 @@ import { Link } from "react-router-dom";
 import { CTAButton } from "../components/CTAButton";
 import { siteContent } from "../data/siteContent";
 import { InsuranceNotice } from "../components/InsuranceNotice";
+import {
+  FeaturedTestimonialsSection,
+  FinancingFaqSection,
+  MichiganServiceSection,
+  PaymentExperienceSection,
+  PremiumTrustBar,
+  WhyChooseUsSection,
+} from "../components/HomepagePremiumSections";
+
+const diagnosticGallery = [
+  {
+    src: "/images/patient-education/occlusal-cavity-view.jpeg",
+    title: "Tooth Decay",
+    text: "Close-up view of cracks, cavities, staining, and tooth structure.",
+  },
+  {
+    src: "/images/patient-education/radiograph-full-view.jpeg",
+    title: "Full Radiograph Review",
+    text: "X-ray review for diagnosis, prognosis, risks, and next steps.",
+  },
+  {
+    src: "/images/patient-education/radiograph-measurements.jpeg",
+    title: "Radiograph Measurements",
+    text: "Bone levels, spacing, defects, and areas that need attention.",
+  },
+  {
+    src: "/images/patient-education/radiograph-marked.jpeg",
+    title: "Marked Findings",
+    text: "Highlighted findings so patients understand what we see.",
+  },
+  {
+    src: "/images/patient-education/intraoral-side-view.jpeg",
+    title: "Intraoral Photo Review",
+    text: "Gums, bite, and tooth surfaces shown clearly.",
+  },
+];
+
+function DiagnosticImageScroller() {
+  return (
+    <div className="mx-auto mt-8 max-w-6xl overflow-x-auto pb-4">
+      <div className="flex snap-x snap-mandatory gap-4 px-1">
+        {diagnosticGallery.map((image) => (
+          <article
+            key={image.title}
+            className="w-[230px] shrink-0 snap-start overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md shadow-gray-950/5 sm:w-[250px] md:w-[270px]"
+          >
+            <div className="aspect-[3/2] w-full bg-gray-950">
+              <img
+                src={image.src}
+                alt={image.title}
+                width={900}
+                height={600}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="p-4">
+              <h3 className="text-sm font-black leading-tight text-gray-950 md:text-base">
+                {image.title}
+              </h3>
+
+              <p className="mt-2 text-xs leading-5 text-gray-600">
+                {image.text}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function Home() {
   return (
@@ -76,6 +148,7 @@ export function Home() {
           </div>
         </div>
       </section>
+      <PremiumTrustBar />
 
       <section className="border-y border-gray-100 bg-white px-6 py-6">
         <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-3">
@@ -158,7 +231,10 @@ export function Home() {
           <h2 className="mt-4 text-4xl font-black tracking-[-0.05em] md:text-6xl">
             We explain what we see before treatment begins.
           </h2>
-
+          <DiagnosticImageScroller />
+            <div className="mt-12 overflow-x-auto pb-4">
+  
+</div>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             We believe patients should understand the images, symptoms,
             diagnosis, prognosis, risks, fees, and options before making a
@@ -251,6 +327,12 @@ export function Home() {
         </div>
       </section>
             <InsuranceNotice />
+            
+      <WhyChooseUsSection />
+      <MichiganServiceSection />
+      <FeaturedTestimonialsSection />
+      <PaymentExperienceSection />
+      <FinancingFaqSection />
     </main>
   );
 }
